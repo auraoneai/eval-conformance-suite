@@ -8,7 +8,15 @@ if LOCAL_RUBRIC_SPEC.exists():
 
 from eval_conformance_suite.runner import run
 
-def test_rubric_spec_adapter_passes():
-    result = run("rubric_spec.adapters.inspect_ai")
-    assert result["passed"], result
-    assert len(result["cases"]) == 18
+def test_all_rubric_spec_adapters_pass():
+    adapters = [
+        "rubric_spec.adapters.inspect_ai",
+        "rubric_spec.adapters.promptfoo",
+        "rubric_spec.adapters.deepeval",
+        "rubric_spec.adapters.langsmith",
+        "rubric_spec.adapters.evalkit",
+    ]
+    for adapter in adapters:
+        result = run(adapter)
+        assert result["passed"], result
+        assert len(result["cases"]) == 18
