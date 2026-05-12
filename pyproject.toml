@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "eval-conformance-suite"
-version = "0.1.0"
+version = "0.1.1"
 description = "Executable rubric-spec v1 conformance suite."
 readme = "README.md"
 requires-python = ">=3.10"
