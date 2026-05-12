@@ -9,4 +9,6 @@ if LOCAL_RUBRIC_SPEC.exists():
 from eval_conformance_suite.runner import run
 
 def test_rubric_spec_adapter_passes():
-    assert run("rubric_spec.adapters.inspect_ai")["passed"]
+    result = run("rubric_spec.adapters.inspect_ai")
+    assert result["passed"], result
+    assert len(result["cases"]) == 18

@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
 authors = [{ name = "AuraOne" }]
-dependencies = []
+dependencies = ["rubric-spec>=0.1.0"]
 
 [project.scripts]
 eval-conformance-suite = "eval_conformance_suite.runner:main"
