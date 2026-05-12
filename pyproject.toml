@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "eval-conformance-suite"
+version = "0.1.0"
+description = "Executable rubric-spec v1 conformance suite."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "AuraOne" }]
+dependencies = []
+
+[project.scripts]
+eval-conformance-suite = "eval_conformance_suite.runner:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]
+testpaths = ["tests"]
