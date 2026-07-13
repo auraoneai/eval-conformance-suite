@@ -1,6 +1,6 @@
 # Eval Conformance Suite Architecture
 
-`eval-conformance-suite` turns the `rubric-spec` conformance list into executable checks that frameworks can run to claim compatibility.
+`eval-conformance-suite` turns the `rubric-spec` conformance list into executable checks that adapter maintainers can run before documenting compatibility.
 
 ## Components
 
@@ -14,3 +14,6 @@
 - Reports preserve individual case names and messages, making failed conformance easy to debug.
 - Badge generation is deterministic and does not depend on hosted state.
 - Examples and fixtures are synthetic and intentionally small.
+- The target named by `--against` is imported and executed in-process. Only trusted adapter modules should be tested.
+- The badge renderer does not consume a conformance report and currently emits a passing badge for the supplied label. Publication must be gated on a separate successful `run`.
+- Passing these cases is evidence about the adapter's schema transformations, not the external framework's installation, runtime, security, or production behavior.
