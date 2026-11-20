@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "eval-conformance-suite"
 version = "0.1.2"
-description = "Run rubric-spec adapter conformance checks and render deterministic status badges."
+description = "LLM evaluation conformance tests: run rubric-spec adapter conformance checks and render deterministic status badges."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
@@ -26,7 +26,8 @@ classifiers = [
 dependencies = ["rubric-spec>=0.1.1"]
 
 [project.urls]
-Homepage = "https://github.com/auraoneai/eval-conformance-suite"
+Homepage = "https://auraone.ai/open/evalkit"
+Source = "https://github.com/auraoneai/eval-conformance-suite"
 Documentation = "https://github.com/auraoneai/eval-conformance-suite#readme"
 Repository = "https://github.com/auraoneai/eval-conformance-suite.git"
 Issues = "https://github.com/auraoneai/eval-conformance-suite/issues"
