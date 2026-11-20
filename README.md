@@ -1,5 +1,18 @@
 # eval-conformance-suite
 
+**LLM evaluation conformance tests** for `rubric-spec` adapters.
+
+> Part of [AuraOne EvalKit](https://auraone.ai/open/evalkit). Run it against the `rubric-spec` adapters, including the EvalKit adapter, before claiming schema compatibility.
+
+## Quick Start
+
+```bash
+python -m pip install eval-conformance-suite==0.1.2
+eval-conformance-suite run \
+  --against rubric_spec.adapters.inspect_ai \
+  > conformance.json
+```
+
 Run executable `rubric-spec` adapter checks before claiming schema compatibility.
 
 `eval-conformance-suite` is for adapter maintainers and evaluation-platform integrators. Its differentiator is an executable, framework-neutral contract: it imports a target Python adapter module and runs 18 synthetic cases covering scale types, anchors, weights, tie-break rules, judge prompt contracts, provenance, validation errors, lint findings, deterministic serialization, and round-trip field preservation.
